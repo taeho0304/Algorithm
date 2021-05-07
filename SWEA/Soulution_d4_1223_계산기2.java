@@ -1,4 +1,4 @@
-package com.ssafy.io;
+package com.ssafy.algo;
 
 import java.io.*;
 import java.util.*;
