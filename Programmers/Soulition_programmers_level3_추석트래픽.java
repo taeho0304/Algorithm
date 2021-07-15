@@ -1,3 +1,5 @@
+package programmers;
+
 import java.util.*;
 
 class Solution {
@@ -12,7 +14,7 @@ class Solution {
 			int cnt = 0;
 			int startOfSection = startTimes[i];
 			int endOfSection = startOfSection + 1000;
-			
+			 
 			for(int j = 0 ; j < lines.length ; ++j) {
 				if(startTimes[j] >= startOfSection && startTimes[j] < endOfSection) {
 					cnt++;
