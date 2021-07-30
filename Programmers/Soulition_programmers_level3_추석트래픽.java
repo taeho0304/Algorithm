@@ -1,8 +1,8 @@
-package programmers;
+package PG;
 
 import java.util.*;
 
-class Solution {
+public class Soulition_programmers_level3_추석트래픽 {
 	public int solution(String[] lines) {
 		int answer = 0;
 		int[] startTimes = new int[lines.length];
@@ -14,7 +14,7 @@ class Solution {
 			int cnt = 0;
 			int startOfSection = startTimes[i];
 			int endOfSection = startOfSection + 1000;
-			 
+			
 			for(int j = 0 ; j < lines.length ; ++j) {
 				if(startTimes[j] >= startOfSection && startTimes[j] < endOfSection) {
 					cnt++;
