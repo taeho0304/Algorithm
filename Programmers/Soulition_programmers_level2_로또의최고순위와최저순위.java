@@ -23,7 +23,7 @@ public class Soulition_programmers_level2_로또의최고순위와최저순위 {
 		}
 		answer[0]= 7-cnt-zcnt;
 		answer[1]= 7-cnt;
+		if(answer[0]==7) answer[0]=6;
 		if(answer[1]==7) answer[1]=6;
-//		return answer;
 	}
 }
