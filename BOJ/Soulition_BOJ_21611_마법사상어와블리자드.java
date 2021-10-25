@@ -70,21 +70,23 @@ public class Soulition_BOJ_21611_마법사상어와블리자드 {
 	}
 
 	private static void fillMap() {
-		// TODO Auto-generated method stub
 		int ny = N / 2;
 		int nx = N / 2;
 		int dir = 0;
 		int size = 1;
 		int idx = 0;
 		while (isValid(ny, nx)) {
-			if (idx >= list2.size()) break;
+			if (idx >= list2.size())
+				break;
 			for (int i = 0; i < 2; i++) {
 				for (int j = 0; j < size; j++) {
-					if (idx >= list2.size()) break;
+					if (idx >= list2.size())
+						break;
 					ny = ny + dy[dir];
 					nx = nx + dx[dir];
 
-					if (!isValid(ny, nx)) continue;
+					if (!isValid(ny, nx))
+						continue;
 					map[ny][nx] = list2.get(idx);
 					idx++;
 				}
@@ -96,19 +98,17 @@ public class Soulition_BOJ_21611_마법사상어와블리자드 {
 	}
 
 	private static void boom() {
-		// TODO Auto-generated method stub
-
 		boolean flag = true;
 		while (flag) {
 			int idx = 0;
 			int cnt = 1;
 			flag = false;
-			while (idx < list.size()-1) {
+			while (idx < list.size() - 1) {
 				if (list.get(idx) != list.get(idx + 1)) {
 					if (cnt > 3) {
 						for (int i = 0; i < cnt; i++) {
-							answer += list.get(idx+1 - cnt);
-							list.remove(idx+1 - cnt);
+							answer += list.get(idx + 1 - cnt);
+							list.remove(idx + 1 - cnt);
 						}
 						idx -= cnt;
 						flag = true;
@@ -124,8 +124,8 @@ public class Soulition_BOJ_21611_마법사상어와블리자드 {
 			}
 			if (cnt > 3) {
 				for (int i = 0; i < cnt; i++) {
-					answer += list.get(idx+1 - cnt);
-					list.remove(idx+1 - cnt);
+					answer += list.get(idx + 1 - cnt);
+					list.remove(idx + 1 - cnt);
 				}
 			}
 		}
